@@ -1,0 +1,28 @@
+{
+  "name": "secure-shield",
+  "version": "1.0.0",
+  "description": "SecureShield - API Gateway & Web Application Firewall with Real-time Security Dashboard",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev:server": "node server/index.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --prefix client run build",
+    "simulate": "node scripts/simulate-attacks.js",
+    "test": "node scripts/simulate-attacks.js --test"
+  },
+  "keywords": ["cybersecurity", "waf", "api-gateway", "owasp", "security", "firewall"],
+  "author": "Vedhagiri Thejesh",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
